@@ -1,0 +1,24 @@
+{
+	"name": "node-wikimedia",
+	"version": "0.1.0",
+	"author": "Calvin Chan",
+	"license": "MIT",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "4.x",
+		"express-handlebars": "*",
+		"body-parser": "*",
+		"cookie-parser": "*",
+		"morgan": "*",
+		"serve-favicon": "*",
+		"nodemw": "*",
+		"text-statistics": "*"
+	},
+	"engines": {
+		"node": "6.x.x",
+		"npm": "3.9.x"
+	}
+}

@@ -1,0 +1,45 @@
+<h1 id="header" class="bold center">Article Readability</h1>
+
+<div id="input-wrapper">
+	<input class="input" id="category-input" placeholder="Enter a category"></input>
+</div>
+
+<div id="input-wrapper">
+	<input class="input" id="entry-input" placeholder="How many articles? (default 10)"></input>
+</div>
+
+<div id="sort-wrapper">
+	<div id="sort-container">
+		<span id="sort">Flesch Reading Ease</span>
+		<i id="sort-arrow" class="fa fa-angle-up"></i>
+	</div>
+	<div id="sort-options">
+		<div class="sort" id="flesch">Flesch Reading Ease</div>
+		<div class="sort" id="fleschKincaidGrade">Flesch-Kincaid Grade Level</div>
+		<div class="sort" id="gunningFogScore">Gunning-Fog Index</div>
+		<div class="sort" id="colemanLiauIndex">Coleman-Liau Index</div>
+		<div class="sort" id="smogIndex">SMOG Grade</div>
+		<div class="sort" id="automatedReadabilityIndex">Automated Readability Index</div>
+	</div>
+</div>
+
+<div id="search-wrapper">
+	<div id="search">Search</div>
+</div>
+
+<div id="category-output">
+	<script id="results-template" type="text/x-handlebars-template">
+		<table id="output-table">
+			<tr id="table-header" class="bold">
+				<td>Article</td>
+				<td id="score-title" class="score"></td>
+			</tr>
+			\{{#each .}}
+			<tr id=\{{pageid}}>
+				<td><a href=\{{urltitle}} target="_blank">\{{title}}</a></td>
+				<td class="score">\{{score}}</td>
+			</tr>
+			\{{/each}}
+		</table>
+	</script>
+</div>
