@@ -108,7 +108,7 @@ $(function() {
 		categoryOutput.html('<div class="spinner"><i class="fa fa-spinner fa-spin"></i></div>');
 		categorySortMethod = selected;
 		categorySortTitle = $('#sort').html();
-		numArticles = ((Number(entryInput.val()) === (0 || NaN)) ? 10 : Number(entryInput.val()));
+		numArticles = (((Number(entryInput.val()) === 0) || (Number(entryInput.val()) === NaN)) ? 10 : Number(entryInput.val()));
 		categorySearch();
 	});
 });
